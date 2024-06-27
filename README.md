@@ -8,7 +8,7 @@ Below prerequisites must be fulfilled for successful execution of terraform conc
 ### Software Requirement
 Resources in this repository are meant to use with Terraform 1.3.6 (check the terraform version using: `terraform version`). If you don't have the compatible version, download it from official Terraform repository.
 
-- Terraform](https://www.terraform.io/downloads.html) >= 1.3.6
+- [Terraform](https://www.terraform.io/downloads.html) >= 1.3.6
 - [Terraform Provider for GCP](https://github.com/terraform-providers/terraform-provider-google) >= 4.55.0
 - [Terraform Provider for GCP Beta](https://github.com/terraform-providers/terraform-provider-google-beta) >= 4.55.0
 - [gcloud](https://cloud.google.com/sdk/gcloud/) > 243.0.0
