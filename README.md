@@ -13,7 +13,7 @@ Resources in this repository are meant to use with Terraform 1.3.6 (check the te
 - [Terraform Provider for GCP Beta](https://github.com/terraform-providers/terraform-provider-google-beta) >= 4.55.0
 - [gcloud](https://cloud.google.com/sdk/gcloud/) > 243.0.0
 
-> **Note:** 
+> **Note:**
 > See [Installation-Guide](https://gist.github.com/anupam-sy/7458df6506e8e3cfb28c0ff56fab546a) on how to install Terraform.
 
 ### API Requirement

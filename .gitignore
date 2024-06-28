@@ -33,3 +33,6 @@ override.tf.json
 
 # Additional files
 docs/*
+
+# terraform lockfile
+.terraform.lock.hcl
