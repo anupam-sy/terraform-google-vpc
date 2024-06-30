@@ -1,0 +1,92 @@
+name: Terraform Module CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+
+env:
+  TERRAFORM_VER: 1.3.6
+  TERRAFORM_DIR: "."
+  CLOUDSDK_VER: 480.0.0
+
+jobs:
+  tf-module-release:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      id-token: write
+      pull-requests: write
+
+    steps:
+      # Checkout the repository code
+      - name: Code checkout
+        id: code_checkout
+        uses: actions/checkout@v4
+
+      # Scan the repo for any sensitive information like secrets etc
+      - name: Secret Scanning
+        uses: trufflesecurity/trufflehog@main
+        with:
+          path: ./ # Code repository path
+          base: main # Start scanning from here (usually main branch).
+          head: HEAD # Scan commits until here (usually dev branch).
+
+      # Static code analysis using aqua security's tfsec
+      - name: Run tfsec scan
+        id: static_code_analysis
+        uses: aquasecurity/tfsec-action@v1.0.3
+        with:
+          working_directory: ${{ env.TERRAFORM_DIR }}
+          additional_args: --minimum-severity HIGH
+
+      # Install the latest version of Google Cloud SDK
+      - id: cloud_sdk_installation
+        name: Set up Cloud SDK
+        uses: google-github-actions/setup-gcloud@v0.3.0
+        with:
+          version: ${{ env.CLOUDSDK_VER }}
+
+      # Setup the authentication for the Google Cloud using WIF
+      - id: gcp_auth
+        name: Authenticate to GCP
+        uses: google-github-actions/auth@v0.3.1
+        with:
+          create_credentials_file: 'true'
+          workload_identity_provider: ${{ secrets.WORKLOAD_IDENTITY_PROVIDER_ID }}
+          service_account: ${{ secrets.SERVICE_ACCOUNT }}
+
+      # Install the specified version of Terraform CLI
+      - id: tf_installation
+        name: Terraform Installation
+        uses: hashicorp/setup-terraform@v3
+        with:
+          terraform_version: ${{ env.TERRAFORM_VER }}
+
+      # Install the specified version of Terraform CLI
+      - name: Install Ruby and Bundler
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.3.3'
+
+      # Install the specified version of Terraform CLI
+      - name: Install dependencies
+        run: |
+          gem install bundler
+          bundle install
+
+      # Install the specified version of Terraform CLI
+      - name: Run Kitchen-Terraform tests
+        run: bundle exec kitchen test --destroy=always
+
+      - name: Release Please
+        id: release
+        if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+        uses: googleapis/release-please-action@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          target-branch: ${{ github.ref_name }}

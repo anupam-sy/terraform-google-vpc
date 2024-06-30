@@ -1,0 +1,45 @@
+---
+driver:
+  name: terraform
+  command_timeout: 600
+
+provisioner:
+  name: terraform
+
+verifier:
+  # The Terraform verifier utilizes InSpec to verify the behaviour and state of resources in the Terraform state.
+  name: terraform
+
+platforms:
+  - name: terraform
+
+suites:
+  - name: default
+    driver:
+      root_module_directory: test/fixtures/default
+    verifier:
+      systems:
+        - name: default
+          backend: gcp
+          profile_locations:
+            - test/integration/default
+          controls:
+            - default
+            - creation_time
+          attrs:
+            - test/integration/default/inputs.yml
+  - name: routing_mode
+    driver:
+      root_module_directory: test/fixtures/routing_mode
+    verifier:
+      inspec_tests:
+        - test/integration/routing_mode
+      systems:
+        - name: routing_mode
+          backend: gcp
+          profile_locations:
+            - test/integration/routing_mode
+          controls:
+            - routing_mode
+          attrs:
+            - test/integration/routing_mode/inputs.yml

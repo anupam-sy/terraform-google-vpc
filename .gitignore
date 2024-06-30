@@ -36,3 +36,6 @@ docs/*
 
 # terraform lockfile
 .terraform.lock.hcl
+
+# kitchen files
+.kitchen
