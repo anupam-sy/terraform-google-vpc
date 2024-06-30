@@ -47,11 +47,11 @@ Then perform the following commands on the root folder:
 Integration testing for terraform modules can be done using available tools. This terraform module uses Kitchen-Terraform. Kitchen-Terraform integrates Test Kitchen with Terraform, enabling you to write tests using InSpec to validate your infrastructure.
 
 ### Tools Requirement
-- Kitchen-Terraform: A Test Kitchen plugin for Terraform that allows you to test your Terraform configurations.
+- Kitchen-Terraform: A Test [Kitchen plugin](https://www.rubydoc.info/gems/kitchen-terraform) for Terraform that allows you to test your Terraform configurations.
 - Test Kitchen: An integration tool for developing and testing infrastructure code.
 - InSpec: A [testing framework](https://docs.chef.io/inspec/) used to write tests to verify the state of your infrastructure.
 - Ruby: Kitchen-Terraform and Test Kitchen are Ruby-based, so you’ll need Ruby installed.
-- Bundler: A dependency manager for Ruby projects to manage and install the required gems.
+- Bundler: A dependency manager for Ruby projects to manage and install the required [gems](https://rubygems.org/).
 
 ### Tests Execution
 Run kitchen tests commands as per [Test Kitchen](https://kitchen.ci/) workflow to test the terraform modules to esnure that they are working as expected.
