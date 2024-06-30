@@ -1,0 +1,14 @@
+{
+  "release-type": "terraform-module",
+  "package-name": "terraform-google-vpc",
+  "include-v-in-tag": true,
+  "include-component-in-tag": false,
+  "prerelease": false,
+  "bump-minor-pre-major": true,
+  "label": "autorelease: pending",
+  "pull-request-title-pattern": "chore${scope}: release${component} ${version}",
+  "pull-request-header": ":robot: I have created a release *beep* *boop* *botz*",
+  "packages": {
+    ".": {}
+  }
+}
