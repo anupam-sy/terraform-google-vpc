@@ -1,0 +1,52 @@
+---
+last_action: converge
+last_error:
+kitchen_terraform_outputs:
+  network:
+    sensitive: false
+    type:
+    - object
+    - auto_create_subnetworks: bool
+      delete_default_routes_on_create: bool
+      description: string
+      enable_ula_internal_ipv6: bool
+      gateway_ipv4: string
+      id: string
+      internal_ipv6_range: string
+      mtu: number
+      name: string
+      network_firewall_policy_enforcement_order: string
+      numeric_id: string
+      project: string
+      routing_mode: string
+      self_link: string
+      timeouts:
+      - object
+      - create: string
+        delete: string
+        update: string
+    value:
+      auto_create_subnetworks: false
+      delete_default_routes_on_create: false
+      description: The vpc network for test environment.
+      enable_ula_internal_ipv6: false
+      gateway_ipv4: ''
+      id: projects/tidy-interface-421310/global/networks/fdn-tst-vpc-02
+      internal_ipv6_range: ''
+      mtu: 0
+      name: fdn-tst-vpc-02
+      network_firewall_policy_enforcement_order: AFTER_CLASSIC_FIREWALL
+      numeric_id: '5063169882706483628'
+      project: tidy-interface-421310
+      routing_mode: GLOBAL
+      self_link: https://www.googleapis.com/compute/v1/projects/tidy-interface-421310/global/networks/fdn-tst-vpc-02
+      timeouts:
+  network_id:
+    sensitive: false
+    type: string
+    value: projects/tidy-interface-421310/global/networks/fdn-tst-vpc-02
+  network_name:
+    sensitive: false
+    type: string
+    value: fdn-tst-vpc-02
+kitchen_terraform_variables: {}

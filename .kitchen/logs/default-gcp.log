@@ -1,0 +1,62 @@
+I, [2024-06-30T06:01:22.898685 #95459]  INFO -- default-gcp: -----> Setting up <default-gcp>...
+I, [2024-06-30T06:01:22.899542 #95459]  INFO -- default-gcp: Finished setting up <default-gcp> (0m0.00s).
+I, [2024-06-30T06:01:22.899585 #95459]  INFO -- default-gcp: -----> Verifying <default-gcp>...
+W, [2024-06-30T06:01:22.899840 #95459]  WARN -- default-gcp: Reading the Terraform input variables from the Kitchen instance state...
+W, [2024-06-30T06:01:22.899862 #95459]  WARN -- default-gcp: Finished reading the Terraform input variables from the Kitchen instance state.
+W, [2024-06-30T06:01:22.899874 #95459]  WARN -- default-gcp: Reading the Terraform output variables from the Kitchen instance state...
+W, [2024-06-30T06:01:22.899886 #95459]  WARN -- default-gcp: Finished reading the Terraform output variables from the Kitchen instance state.
+W, [2024-06-30T06:01:22.899896 #95459]  WARN -- default-gcp: Verifying the systems...
+W, [2024-06-30T06:01:22.899943 #95459]  WARN -- default-gcp: Verifying the 'default' system...
+E, [2024-06-30T06:01:28.732373 #95459] ERROR -- default-gcp: Verify failed on instance <default-gcp>.
+E, [2024-06-30T06:01:28.732547 #95459] ERROR -- default-gcp: ------Exception-------
+E, [2024-06-30T06:01:28.732559 #95459] ERROR -- default-gcp: Class: Kitchen::ActionFailed
+E, [2024-06-30T06:01:28.732567 #95459] ERROR -- default-gcp: Message: Verifying the 'default' system failed:
+	Running InSpec failed:
+		Running InSpec failed due to a non-zero exit code of 1.
+E, [2024-06-30T06:01:28.732575 #95459] ERROR -- default-gcp: ----------------------
+E, [2024-06-30T06:01:28.732581 #95459] ERROR -- default-gcp: ------Backtrace-------
+E, [2024-06-30T06:01:28.732588 #95459] ERROR -- default-gcp: /Users/anupam/.rbenv/versions/3.3.3/lib/ruby/gems/3.3.0/gems/kitchen-terraform-7.0.2/lib/kitchen/terraform/raise/action_failed.rb:32:in `call'
+E, [2024-06-30T06:01:28.732594 #95459] ERROR -- default-gcp: /Users/anupam/.rbenv/versions/3.3.3/lib/ruby/gems/3.3.0/gems/kitchen-terraform-7.0.2/lib/kitchen/verifier/terraform.rb:114:in `rescue in call'
+E, [2024-06-30T06:01:28.732601 #95459] ERROR -- default-gcp: /Users/anupam/.rbenv/versions/3.3.3/lib/ruby/gems/3.3.0/gems/kitchen-terraform-7.0.2/lib/kitchen/verifier/terraform.rb:109:in `call'
+E, [2024-06-30T06:01:28.732611 #95459] ERROR -- default-gcp: /Users/anupam/.rbenv/versions/3.3.3/lib/ruby/gems/3.3.0/gems/test-kitchen-3.6.0/lib/kitchen/instance.rb:469:in `block in verify_action'
+E, [2024-06-30T06:01:28.732618 #95459] ERROR -- default-gcp: /Users/anupam/.rbenv/versions/3.3.3/lib/ruby/gems/3.3.0/gems/test-kitchen-3.6.0/lib/kitchen/instance.rb:563:in `synchronize_or_call'
+E, [2024-06-30T06:01:28.732624 #95459] ERROR -- default-gcp: /Users/anupam/.rbenv/versions/3.3.3/lib/ruby/gems/3.3.0/gems/test-kitchen-3.6.0/lib/kitchen/instance.rb:524:in `block in action'
+E, [2024-06-30T06:01:28.732632 #95459] ERROR -- default-gcp: /Users/anupam/.rbenv/versions/3.3.3/lib/ruby/3.3.0/benchmark.rb:298:in `measure'
+E, [2024-06-30T06:01:28.732638 #95459] ERROR -- default-gcp: /Users/anupam/.rbenv/versions/3.3.3/lib/ruby/gems/3.3.0/gems/test-kitchen-3.6.0/lib/kitchen/instance.rb:523:in `action'
+E, [2024-06-30T06:01:28.732644 #95459] ERROR -- default-gcp: /Users/anupam/.rbenv/versions/3.3.3/lib/ruby/gems/3.3.0/gems/test-kitchen-3.6.0/lib/kitchen/instance.rb:461:in `verify_action'
+E, [2024-06-30T06:01:28.732652 #95459] ERROR -- default-gcp: /Users/anupam/.rbenv/versions/3.3.3/lib/ruby/gems/3.3.0/gems/test-kitchen-3.6.0/lib/kitchen/instance.rb:392:in `block (2 levels) in transition_to'
+E, [2024-06-30T06:01:28.732658 #95459] ERROR -- default-gcp: /Users/anupam/.rbenv/versions/3.3.3/lib/ruby/gems/3.3.0/gems/test-kitchen-3.6.0/lib/kitchen/lifecycle_hooks.rb:47:in `run_with_hooks'
+E, [2024-06-30T06:01:28.732664 #95459] ERROR -- default-gcp: /Users/anupam/.rbenv/versions/3.3.3/lib/ruby/gems/3.3.0/gems/test-kitchen-3.6.0/lib/kitchen/instance.rb:391:in `block in transition_to'
+E, [2024-06-30T06:01:28.732670 #95459] ERROR -- default-gcp: /Users/anupam/.rbenv/versions/3.3.3/lib/ruby/gems/3.3.0/gems/test-kitchen-3.6.0/lib/kitchen/instance.rb:390:in `each'
+E, [2024-06-30T06:01:28.732683 #95459] ERROR -- default-gcp: /Users/anupam/.rbenv/versions/3.3.3/lib/ruby/gems/3.3.0/gems/test-kitchen-3.6.0/lib/kitchen/instance.rb:390:in `transition_to'
+E, [2024-06-30T06:01:28.732689 #95459] ERROR -- default-gcp: /Users/anupam/.rbenv/versions/3.3.3/lib/ruby/gems/3.3.0/gems/test-kitchen-3.6.0/lib/kitchen/instance.rb:161:in `verify'
+E, [2024-06-30T06:01:28.732694 #95459] ERROR -- default-gcp: /Users/anupam/.rbenv/versions/3.3.3/lib/ruby/gems/3.3.0/gems/test-kitchen-3.6.0/lib/kitchen/command.rb:195:in `public_send'
+E, [2024-06-30T06:01:28.732698 #95459] ERROR -- default-gcp: /Users/anupam/.rbenv/versions/3.3.3/lib/ruby/gems/3.3.0/gems/test-kitchen-3.6.0/lib/kitchen/command.rb:195:in `run_action_in_thread'
+E, [2024-06-30T06:01:28.732703 #95459] ERROR -- default-gcp: /Users/anupam/.rbenv/versions/3.3.3/lib/ruby/gems/3.3.0/gems/test-kitchen-3.6.0/lib/kitchen/command.rb:166:in `block (2 levels) in run_action'
+E, [2024-06-30T06:01:28.732708 #95459] ERROR -- default-gcp: ----End Backtrace-----
+E, [2024-06-30T06:01:28.732712 #95459] ERROR -- default-gcp: ---Nested Exception---
+E, [2024-06-30T06:01:28.732717 #95459] ERROR -- default-gcp: Class: Kitchen::TransientFailure
+E, [2024-06-30T06:01:28.732722 #95459] ERROR -- default-gcp: Message: Verifying the 'default' system failed:
+	Running InSpec failed:
+		Running InSpec failed due to a non-zero exit code of 1.
+E, [2024-06-30T06:01:28.732727 #95459] ERROR -- default-gcp: ----------------------
+E, [2024-06-30T06:01:28.732731 #95459] ERROR -- default-gcp: ------Backtrace-------
+E, [2024-06-30T06:01:28.732736 #95459] ERROR -- default-gcp: /Users/anupam/.rbenv/versions/3.3.3/lib/ruby/gems/3.3.0/gems/kitchen-terraform-7.0.2/lib/kitchen/terraform/raise/action_failed.rb:32:in `call'
+E, [2024-06-30T06:01:28.732740 #95459] ERROR -- default-gcp: /Users/anupam/.rbenv/versions/3.3.3/lib/ruby/gems/3.3.0/gems/kitchen-terraform-7.0.2/lib/kitchen/verifier/terraform.rb:114:in `rescue in call'
+E, [2024-06-30T06:01:28.732745 #95459] ERROR -- default-gcp: /Users/anupam/.rbenv/versions/3.3.3/lib/ruby/gems/3.3.0/gems/kitchen-terraform-7.0.2/lib/kitchen/verifier/terraform.rb:109:in `call'
+E, [2024-06-30T06:01:28.732750 #95459] ERROR -- default-gcp: /Users/anupam/.rbenv/versions/3.3.3/lib/ruby/gems/3.3.0/gems/test-kitchen-3.6.0/lib/kitchen/instance.rb:469:in `block in verify_action'
+E, [2024-06-30T06:01:28.732755 #95459] ERROR -- default-gcp: /Users/anupam/.rbenv/versions/3.3.3/lib/ruby/gems/3.3.0/gems/test-kitchen-3.6.0/lib/kitchen/instance.rb:563:in `synchronize_or_call'
+E, [2024-06-30T06:01:28.732760 #95459] ERROR -- default-gcp: /Users/anupam/.rbenv/versions/3.3.3/lib/ruby/gems/3.3.0/gems/test-kitchen-3.6.0/lib/kitchen/instance.rb:524:in `block in action'
+E, [2024-06-30T06:01:28.732764 #95459] ERROR -- default-gcp: /Users/anupam/.rbenv/versions/3.3.3/lib/ruby/3.3.0/benchmark.rb:298:in `measure'
+E, [2024-06-30T06:01:28.732769 #95459] ERROR -- default-gcp: /Users/anupam/.rbenv/versions/3.3.3/lib/ruby/gems/3.3.0/gems/test-kitchen-3.6.0/lib/kitchen/instance.rb:523:in `action'
+E, [2024-06-30T06:01:28.732774 #95459] ERROR -- default-gcp: /Users/anupam/.rbenv/versions/3.3.3/lib/ruby/gems/3.3.0/gems/test-kitchen-3.6.0/lib/kitchen/instance.rb:461:in `verify_action'
+E, [2024-06-30T06:01:28.732779 #95459] ERROR -- default-gcp: /Users/anupam/.rbenv/versions/3.3.3/lib/ruby/gems/3.3.0/gems/test-kitchen-3.6.0/lib/kitchen/instance.rb:392:in `block (2 levels) in transition_to'
+E, [2024-06-30T06:01:28.732784 #95459] ERROR -- default-gcp: /Users/anupam/.rbenv/versions/3.3.3/lib/ruby/gems/3.3.0/gems/test-kitchen-3.6.0/lib/kitchen/lifecycle_hooks.rb:47:in `run_with_hooks'
+E, [2024-06-30T06:01:28.732788 #95459] ERROR -- default-gcp: /Users/anupam/.rbenv/versions/3.3.3/lib/ruby/gems/3.3.0/gems/test-kitchen-3.6.0/lib/kitchen/instance.rb:391:in `block in transition_to'
+E, [2024-06-30T06:01:28.732793 #95459] ERROR -- default-gcp: /Users/anupam/.rbenv/versions/3.3.3/lib/ruby/gems/3.3.0/gems/test-kitchen-3.6.0/lib/kitchen/instance.rb:390:in `each'
+E, [2024-06-30T06:01:28.732798 #95459] ERROR -- default-gcp: /Users/anupam/.rbenv/versions/3.3.3/lib/ruby/gems/3.3.0/gems/test-kitchen-3.6.0/lib/kitchen/instance.rb:390:in `transition_to'
+E, [2024-06-30T06:01:28.732808 #95459] ERROR -- default-gcp: /Users/anupam/.rbenv/versions/3.3.3/lib/ruby/gems/3.3.0/gems/test-kitchen-3.6.0/lib/kitchen/instance.rb:161:in `verify'
+E, [2024-06-30T06:01:28.732813 #95459] ERROR -- default-gcp: /Users/anupam/.rbenv/versions/3.3.3/lib/ruby/gems/3.3.0/gems/test-kitchen-3.6.0/lib/kitchen/command.rb:195:in `public_send'
+E, [2024-06-30T06:01:28.732817 #95459] ERROR -- default-gcp: /Users/anupam/.rbenv/versions/3.3.3/lib/ruby/gems/3.3.0/gems/test-kitchen-3.6.0/lib/kitchen/command.rb:195:in `run_action_in_thread'
+E, [2024-06-30T06:01:28.732822 #95459] ERROR -- default-gcp: /Users/anupam/.rbenv/versions/3.3.3/lib/ruby/gems/3.3.0/gems/test-kitchen-3.6.0/lib/kitchen/command.rb:166:in `block (2 levels) in run_action'
+E, [2024-06-30T06:01:28.732826 #95459] ERROR -- default-gcp: ----End Backtrace-----

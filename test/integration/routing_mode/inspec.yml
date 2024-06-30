@@ -1,0 +1,11 @@
+name: routing_mode
+attributes:
+  - name: project_id
+    required: true
+    type: string
+  - name: vpc_name
+    required: true
+    type: string
+depends:
+  - name: inspec-gcp
+    git: https://github.com/inspec/inspec-gcp
