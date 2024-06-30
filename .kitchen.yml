@@ -11,7 +11,7 @@ verifier:
   name: terraform
 
 platforms:
-  - name: gcp
+  - name: terraform
 
 suites:
   - name: default
@@ -20,16 +20,26 @@ suites:
     verifier:
       systems:
         - name: default
-          backend: local
+          backend: gcp
+          profile_locations:
+            - test/integration/default
           controls:
             - default
             - creation_time
+          attrs:
+            - test/integration/default/inputs.yml
   - name: routing_mode
     driver:
       root_module_directory: test/fixtures/routing_mode
     verifier:
+      inspec_tests:
+        - test/integration/routing_mode
       systems:
         - name: routing_mode
-          backend: local
+          backend: gcp
+          profile_locations:
+            - test/integration/routing_mode
           controls:
             - routing_mode
+          attrs:
+            - test/integration/routing_mode/inputs.yml

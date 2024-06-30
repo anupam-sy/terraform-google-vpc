@@ -1,94 +1,18 @@
-I, [2024-06-30T06:01:22.284772 #95459]  INFO -- Kitchen: -----> Starting Test Kitchen (v3.6.0)
-I, [2024-06-30T06:01:22.898643 #95459]  INFO -- Kitchen: -----> Setting up <default-gcp>...
-I, [2024-06-30T06:01:22.899575 #95459]  INFO -- Kitchen: -----> Verifying <default-gcp>...
-E, [2024-06-30T06:01:28.732047 #95459] ERROR -- Kitchen: Verifying the 'default' system failed:
-	Running InSpec failed:
-		Running InSpec failed due to a non-zero exit code of 1.
-E, [2024-06-30T06:01:28.735485 #95459] ERROR -- Kitchen: ------Exception-------
-E, [2024-06-30T06:01:28.735504 #95459] ERROR -- Kitchen: Class: Kitchen::ActionFailed
-E, [2024-06-30T06:01:28.735512 #95459] ERROR -- Kitchen: Message: 1 actions failed.
->>>>>>     Verify failed on instance <default-gcp>.  Please see .kitchen/logs/default-gcp.log for more details
-E, [2024-06-30T06:01:28.735519 #95459] ERROR -- Kitchen: ----------------------
-E, [2024-06-30T06:01:28.735526 #95459] ERROR -- Kitchen: ------Backtrace-------
-E, [2024-06-30T06:01:28.735533 #95459] ERROR -- Kitchen: /Users/anupam/.rbenv/versions/3.3.3/lib/ruby/gems/3.3.0/gems/test-kitchen-3.6.0/lib/kitchen/command.rb:181:in `report_errors'
-E, [2024-06-30T06:01:28.735540 #95459] ERROR -- Kitchen: /Users/anupam/.rbenv/versions/3.3.3/lib/ruby/gems/3.3.0/gems/test-kitchen-3.6.0/lib/kitchen/command.rb:172:in `run_action'
-E, [2024-06-30T06:01:28.735549 #95459] ERROR -- Kitchen: /Users/anupam/.rbenv/versions/3.3.3/lib/ruby/gems/3.3.0/gems/test-kitchen-3.6.0/lib/kitchen/command/action.rb:35:in `block in call'
-E, [2024-06-30T06:01:28.735555 #95459] ERROR -- Kitchen: /Users/anupam/.rbenv/versions/3.3.3/lib/ruby/3.3.0/benchmark.rb:298:in `measure'
-E, [2024-06-30T06:01:28.735562 #95459] ERROR -- Kitchen: /Users/anupam/.rbenv/versions/3.3.3/lib/ruby/gems/3.3.0/gems/test-kitchen-3.6.0/lib/kitchen/command/action.rb:33:in `call'
-E, [2024-06-30T06:01:28.735568 #95459] ERROR -- Kitchen: /Users/anupam/.rbenv/versions/3.3.3/lib/ruby/gems/3.3.0/gems/test-kitchen-3.6.0/lib/kitchen/cli.rb:52:in `perform'
-E, [2024-06-30T06:01:28.735575 #95459] ERROR -- Kitchen: /Users/anupam/.rbenv/versions/3.3.3/lib/ruby/gems/3.3.0/gems/test-kitchen-3.6.0/lib/kitchen/cli.rb:198:in `block (2 levels) in <class:CLI>'
-E, [2024-06-30T06:01:28.735582 #95459] ERROR -- Kitchen: /Users/anupam/.rbenv/versions/3.3.3/lib/ruby/gems/3.3.0/gems/thor-1.3.1/lib/thor/command.rb:28:in `run'
-E, [2024-06-30T06:01:28.735588 #95459] ERROR -- Kitchen: /Users/anupam/.rbenv/versions/3.3.3/lib/ruby/gems/3.3.0/gems/thor-1.3.1/lib/thor/invocation.rb:127:in `invoke_command'
-E, [2024-06-30T06:01:28.735595 #95459] ERROR -- Kitchen: /Users/anupam/.rbenv/versions/3.3.3/lib/ruby/gems/3.3.0/gems/thor-1.3.1/lib/thor.rb:527:in `dispatch'
-E, [2024-06-30T06:01:28.735602 #95459] ERROR -- Kitchen: /Users/anupam/.rbenv/versions/3.3.3/lib/ruby/gems/3.3.0/gems/thor-1.3.1/lib/thor/base.rb:584:in `start'
-E, [2024-06-30T06:01:28.735608 #95459] ERROR -- Kitchen: /Users/anupam/.rbenv/versions/3.3.3/lib/ruby/gems/3.3.0/gems/test-kitchen-3.6.0/bin/kitchen:11:in `block in <top (required)>'
-E, [2024-06-30T06:01:28.735615 #95459] ERROR -- Kitchen: /Users/anupam/.rbenv/versions/3.3.3/lib/ruby/gems/3.3.0/gems/test-kitchen-3.6.0/lib/kitchen/errors.rb:183:in `with_friendly_errors'
-E, [2024-06-30T06:01:28.735621 #95459] ERROR -- Kitchen: /Users/anupam/.rbenv/versions/3.3.3/lib/ruby/gems/3.3.0/gems/test-kitchen-3.6.0/bin/kitchen:11:in `<top (required)>'
-E, [2024-06-30T06:01:28.735628 #95459] ERROR -- Kitchen: /Users/anupam/.rbenv/versions/3.3.3/bin/kitchen:25:in `load'
-E, [2024-06-30T06:01:28.735635 #95459] ERROR -- Kitchen: /Users/anupam/.rbenv/versions/3.3.3/bin/kitchen:25:in `<top (required)>'
-E, [2024-06-30T06:01:28.735642 #95459] ERROR -- Kitchen: /Users/anupam/.rbenv/versions/3.3.3/lib/ruby/3.3.0/bundler/cli/exec.rb:58:in `load'
-E, [2024-06-30T06:01:28.735650 #95459] ERROR -- Kitchen: /Users/anupam/.rbenv/versions/3.3.3/lib/ruby/3.3.0/bundler/cli/exec.rb:58:in `kernel_load'
-E, [2024-06-30T06:01:28.735657 #95459] ERROR -- Kitchen: /Users/anupam/.rbenv/versions/3.3.3/lib/ruby/3.3.0/bundler/cli/exec.rb:23:in `run'
-E, [2024-06-30T06:01:28.735664 #95459] ERROR -- Kitchen: /Users/anupam/.rbenv/versions/3.3.3/lib/ruby/3.3.0/bundler/cli.rb:455:in `exec'
-E, [2024-06-30T06:01:28.735674 #95459] ERROR -- Kitchen: /Users/anupam/.rbenv/versions/3.3.3/lib/ruby/3.3.0/bundler/vendor/thor/lib/thor/command.rb:28:in `run'
-E, [2024-06-30T06:01:28.735679 #95459] ERROR -- Kitchen: /Users/anupam/.rbenv/versions/3.3.3/lib/ruby/3.3.0/bundler/vendor/thor/lib/thor/invocation.rb:127:in `invoke_command'
-E, [2024-06-30T06:01:28.735685 #95459] ERROR -- Kitchen: /Users/anupam/.rbenv/versions/3.3.3/lib/ruby/3.3.0/bundler/vendor/thor/lib/thor.rb:527:in `dispatch'
-E, [2024-06-30T06:01:28.735691 #95459] ERROR -- Kitchen: /Users/anupam/.rbenv/versions/3.3.3/lib/ruby/3.3.0/bundler/cli.rb:35:in `dispatch'
-E, [2024-06-30T06:01:28.735696 #95459] ERROR -- Kitchen: /Users/anupam/.rbenv/versions/3.3.3/lib/ruby/3.3.0/bundler/vendor/thor/lib/thor/base.rb:584:in `start'
-E, [2024-06-30T06:01:28.735703 #95459] ERROR -- Kitchen: /Users/anupam/.rbenv/versions/3.3.3/lib/ruby/3.3.0/bundler/cli.rb:29:in `start'
-E, [2024-06-30T06:01:28.735709 #95459] ERROR -- Kitchen: /Users/anupam/.rbenv/versions/3.3.3/lib/ruby/gems/3.3.0/gems/bundler-2.5.11/exe/bundle:28:in `block in <top (required)>'
-E, [2024-06-30T06:01:28.735714 #95459] ERROR -- Kitchen: /Users/anupam/.rbenv/versions/3.3.3/lib/ruby/3.3.0/bundler/friendly_errors.rb:117:in `with_friendly_errors'
-E, [2024-06-30T06:01:28.735720 #95459] ERROR -- Kitchen: /Users/anupam/.rbenv/versions/3.3.3/lib/ruby/gems/3.3.0/gems/bundler-2.5.11/exe/bundle:20:in `<top (required)>'
-E, [2024-06-30T06:01:28.735725 #95459] ERROR -- Kitchen: /Users/anupam/.rbenv/versions/3.3.3/bin/bundle:25:in `load'
-E, [2024-06-30T06:01:28.735731 #95459] ERROR -- Kitchen: /Users/anupam/.rbenv/versions/3.3.3/bin/bundle:25:in `<main>'
-E, [2024-06-30T06:01:28.735736 #95459] ERROR -- Kitchen: ----End Backtrace-----
-E, [2024-06-30T06:01:28.735741 #95459] ERROR -- Kitchen: -Composite Exception--
-E, [2024-06-30T06:01:28.735747 #95459] ERROR -- Kitchen: Class: Kitchen::InstanceFailure
-E, [2024-06-30T06:01:28.735752 #95459] ERROR -- Kitchen: Message: Verify failed on instance <default-gcp>.  Please see .kitchen/logs/default-gcp.log for more details
-E, [2024-06-30T06:01:28.735757 #95459] ERROR -- Kitchen: ----------------------
-E, [2024-06-30T06:01:28.735763 #95459] ERROR -- Kitchen: ------Backtrace-------
-E, [2024-06-30T06:01:28.735768 #95459] ERROR -- Kitchen: /Users/anupam/.rbenv/versions/3.3.3/lib/ruby/gems/3.3.0/gems/kitchen-terraform-7.0.2/lib/kitchen/terraform/raise/action_failed.rb:32:in `call'
-E, [2024-06-30T06:01:28.735774 #95459] ERROR -- Kitchen: /Users/anupam/.rbenv/versions/3.3.3/lib/ruby/gems/3.3.0/gems/kitchen-terraform-7.0.2/lib/kitchen/verifier/terraform.rb:114:in `rescue in call'
-E, [2024-06-30T06:01:28.735780 #95459] ERROR -- Kitchen: /Users/anupam/.rbenv/versions/3.3.3/lib/ruby/gems/3.3.0/gems/kitchen-terraform-7.0.2/lib/kitchen/verifier/terraform.rb:109:in `call'
-E, [2024-06-30T06:01:28.735785 #95459] ERROR -- Kitchen: /Users/anupam/.rbenv/versions/3.3.3/lib/ruby/gems/3.3.0/gems/test-kitchen-3.6.0/lib/kitchen/instance.rb:469:in `block in verify_action'
-E, [2024-06-30T06:01:28.735790 #95459] ERROR -- Kitchen: /Users/anupam/.rbenv/versions/3.3.3/lib/ruby/gems/3.3.0/gems/test-kitchen-3.6.0/lib/kitchen/instance.rb:563:in `synchronize_or_call'
-E, [2024-06-30T06:01:28.735796 #95459] ERROR -- Kitchen: /Users/anupam/.rbenv/versions/3.3.3/lib/ruby/gems/3.3.0/gems/test-kitchen-3.6.0/lib/kitchen/instance.rb:524:in `block in action'
-E, [2024-06-30T06:01:28.735801 #95459] ERROR -- Kitchen: /Users/anupam/.rbenv/versions/3.3.3/lib/ruby/3.3.0/benchmark.rb:298:in `measure'
-E, [2024-06-30T06:01:28.735807 #95459] ERROR -- Kitchen: /Users/anupam/.rbenv/versions/3.3.3/lib/ruby/gems/3.3.0/gems/test-kitchen-3.6.0/lib/kitchen/instance.rb:523:in `action'
-E, [2024-06-30T06:01:28.735812 #95459] ERROR -- Kitchen: /Users/anupam/.rbenv/versions/3.3.3/lib/ruby/gems/3.3.0/gems/test-kitchen-3.6.0/lib/kitchen/instance.rb:461:in `verify_action'
-E, [2024-06-30T06:01:28.735818 #95459] ERROR -- Kitchen: /Users/anupam/.rbenv/versions/3.3.3/lib/ruby/gems/3.3.0/gems/test-kitchen-3.6.0/lib/kitchen/instance.rb:392:in `block (2 levels) in transition_to'
-E, [2024-06-30T06:01:28.735828 #95459] ERROR -- Kitchen: /Users/anupam/.rbenv/versions/3.3.3/lib/ruby/gems/3.3.0/gems/test-kitchen-3.6.0/lib/kitchen/lifecycle_hooks.rb:47:in `run_with_hooks'
-E, [2024-06-30T06:01:28.735833 #95459] ERROR -- Kitchen: /Users/anupam/.rbenv/versions/3.3.3/lib/ruby/gems/3.3.0/gems/test-kitchen-3.6.0/lib/kitchen/instance.rb:391:in `block in transition_to'
-E, [2024-06-30T06:01:28.735839 #95459] ERROR -- Kitchen: /Users/anupam/.rbenv/versions/3.3.3/lib/ruby/gems/3.3.0/gems/test-kitchen-3.6.0/lib/kitchen/instance.rb:390:in `each'
-E, [2024-06-30T06:01:28.735844 #95459] ERROR -- Kitchen: /Users/anupam/.rbenv/versions/3.3.3/lib/ruby/gems/3.3.0/gems/test-kitchen-3.6.0/lib/kitchen/instance.rb:390:in `transition_to'
-E, [2024-06-30T06:01:28.735849 #95459] ERROR -- Kitchen: /Users/anupam/.rbenv/versions/3.3.3/lib/ruby/gems/3.3.0/gems/test-kitchen-3.6.0/lib/kitchen/instance.rb:161:in `verify'
-E, [2024-06-30T06:01:28.735855 #95459] ERROR -- Kitchen: /Users/anupam/.rbenv/versions/3.3.3/lib/ruby/gems/3.3.0/gems/test-kitchen-3.6.0/lib/kitchen/command.rb:195:in `public_send'
-E, [2024-06-30T06:01:28.735863 #95459] ERROR -- Kitchen: /Users/anupam/.rbenv/versions/3.3.3/lib/ruby/gems/3.3.0/gems/test-kitchen-3.6.0/lib/kitchen/command.rb:195:in `run_action_in_thread'
-E, [2024-06-30T06:01:28.735868 #95459] ERROR -- Kitchen: /Users/anupam/.rbenv/versions/3.3.3/lib/ruby/gems/3.3.0/gems/test-kitchen-3.6.0/lib/kitchen/command.rb:166:in `block (2 levels) in run_action'
-E, [2024-06-30T06:01:28.735874 #95459] ERROR -- Kitchen: ----End Backtrace-----
-E, [2024-06-30T06:01:28.735879 #95459] ERROR -- Kitchen: ---Nested Exception---
-E, [2024-06-30T06:01:28.735885 #95459] ERROR -- Kitchen: Class: Kitchen::ActionFailed
-E, [2024-06-30T06:01:28.735890 #95459] ERROR -- Kitchen: Message: Verifying the 'default' system failed:
-	Running InSpec failed:
-		Running InSpec failed due to a non-zero exit code of 1.
-E, [2024-06-30T06:01:28.735895 #95459] ERROR -- Kitchen: ----------------------
-E, [2024-06-30T06:01:28.735901 #95459] ERROR -- Kitchen: ------Backtrace-------
-E, [2024-06-30T06:01:28.735906 #95459] ERROR -- Kitchen: /Users/anupam/.rbenv/versions/3.3.3/lib/ruby/gems/3.3.0/gems/kitchen-terraform-7.0.2/lib/kitchen/terraform/raise/action_failed.rb:32:in `call'
-E, [2024-06-30T06:01:28.735912 #95459] ERROR -- Kitchen: /Users/anupam/.rbenv/versions/3.3.3/lib/ruby/gems/3.3.0/gems/kitchen-terraform-7.0.2/lib/kitchen/verifier/terraform.rb:114:in `rescue in call'
-E, [2024-06-30T06:01:28.735917 #95459] ERROR -- Kitchen: /Users/anupam/.rbenv/versions/3.3.3/lib/ruby/gems/3.3.0/gems/kitchen-terraform-7.0.2/lib/kitchen/verifier/terraform.rb:109:in `call'
-E, [2024-06-30T06:01:28.735922 #95459] ERROR -- Kitchen: /Users/anupam/.rbenv/versions/3.3.3/lib/ruby/gems/3.3.0/gems/test-kitchen-3.6.0/lib/kitchen/instance.rb:469:in `block in verify_action'
-E, [2024-06-30T06:01:28.735928 #95459] ERROR -- Kitchen: /Users/anupam/.rbenv/versions/3.3.3/lib/ruby/gems/3.3.0/gems/test-kitchen-3.6.0/lib/kitchen/instance.rb:563:in `synchronize_or_call'
-E, [2024-06-30T06:01:28.735933 #95459] ERROR -- Kitchen: /Users/anupam/.rbenv/versions/3.3.3/lib/ruby/gems/3.3.0/gems/test-kitchen-3.6.0/lib/kitchen/instance.rb:524:in `block in action'
-E, [2024-06-30T06:01:28.735938 #95459] ERROR -- Kitchen: /Users/anupam/.rbenv/versions/3.3.3/lib/ruby/3.3.0/benchmark.rb:298:in `measure'
-E, [2024-06-30T06:01:28.735944 #95459] ERROR -- Kitchen: /Users/anupam/.rbenv/versions/3.3.3/lib/ruby/gems/3.3.0/gems/test-kitchen-3.6.0/lib/kitchen/instance.rb:523:in `action'
-E, [2024-06-30T06:01:28.735949 #95459] ERROR -- Kitchen: /Users/anupam/.rbenv/versions/3.3.3/lib/ruby/gems/3.3.0/gems/test-kitchen-3.6.0/lib/kitchen/instance.rb:461:in `verify_action'
-E, [2024-06-30T06:01:28.735955 #95459] ERROR -- Kitchen: /Users/anupam/.rbenv/versions/3.3.3/lib/ruby/gems/3.3.0/gems/test-kitchen-3.6.0/lib/kitchen/instance.rb:392:in `block (2 levels) in transition_to'
-E, [2024-06-30T06:01:28.735964 #95459] ERROR -- Kitchen: /Users/anupam/.rbenv/versions/3.3.3/lib/ruby/gems/3.3.0/gems/test-kitchen-3.6.0/lib/kitchen/lifecycle_hooks.rb:47:in `run_with_hooks'
-E, [2024-06-30T06:01:28.735969 #95459] ERROR -- Kitchen: /Users/anupam/.rbenv/versions/3.3.3/lib/ruby/gems/3.3.0/gems/test-kitchen-3.6.0/lib/kitchen/instance.rb:391:in `block in transition_to'
-E, [2024-06-30T06:01:28.735975 #95459] ERROR -- Kitchen: /Users/anupam/.rbenv/versions/3.3.3/lib/ruby/gems/3.3.0/gems/test-kitchen-3.6.0/lib/kitchen/instance.rb:390:in `each'
-E, [2024-06-30T06:01:28.735980 #95459] ERROR -- Kitchen: /Users/anupam/.rbenv/versions/3.3.3/lib/ruby/gems/3.3.0/gems/test-kitchen-3.6.0/lib/kitchen/instance.rb:390:in `transition_to'
-E, [2024-06-30T06:01:28.735985 #95459] ERROR -- Kitchen: /Users/anupam/.rbenv/versions/3.3.3/lib/ruby/gems/3.3.0/gems/test-kitchen-3.6.0/lib/kitchen/instance.rb:161:in `verify'
-E, [2024-06-30T06:01:28.735990 #95459] ERROR -- Kitchen: /Users/anupam/.rbenv/versions/3.3.3/lib/ruby/gems/3.3.0/gems/test-kitchen-3.6.0/lib/kitchen/command.rb:195:in `public_send'
-E, [2024-06-30T06:01:28.735995 #95459] ERROR -- Kitchen: /Users/anupam/.rbenv/versions/3.3.3/lib/ruby/gems/3.3.0/gems/test-kitchen-3.6.0/lib/kitchen/command.rb:195:in `run_action_in_thread'
-E, [2024-06-30T06:01:28.736001 #95459] ERROR -- Kitchen: /Users/anupam/.rbenv/versions/3.3.3/lib/ruby/gems/3.3.0/gems/test-kitchen-3.6.0/lib/kitchen/command.rb:166:in `block (2 levels) in run_action'
-E, [2024-06-30T06:01:28.736006 #95459] ERROR -- Kitchen: ----End Backtrace-----
+I, [2024-06-30T17:31:14.308346 #46141]  INFO -- Kitchen: -----> Starting Test Kitchen (v3.6.0)
+I, [2024-06-30T17:31:14.934404 #46141]  INFO -- Kitchen: -----> Cleaning up any prior instances of <default-terraform>
+I, [2024-06-30T17:31:14.934494 #46141]  INFO -- Kitchen: -----> Destroying <default-terraform>...
+I, [2024-06-30T17:31:16.594219 #46141]  INFO -- Kitchen: -----> Testing <default-terraform>
+I, [2024-06-30T17:31:16.594291 #46141]  INFO -- Kitchen: -----> Creating <default-terraform>...
+I, [2024-06-30T17:31:17.096722 #46141]  INFO -- Kitchen: -----> Converging <default-terraform>...
+I, [2024-06-30T17:31:36.736708 #46141]  INFO -- Kitchen: -----> Setting up <default-terraform>...
+I, [2024-06-30T17:31:36.737676 #46141]  INFO -- Kitchen: -----> Verifying <default-terraform>...
+I, [2024-06-30T17:31:48.540227 #46141]  INFO -- Kitchen: -----> Destroying <default-terraform>...
+I, [2024-06-30T17:32:29.311712 #46141]  INFO -- Kitchen: -----> Cleaning up any prior instances of <routing-mode-terraform>
+I, [2024-06-30T17:32:29.311998 #46141]  INFO -- Kitchen: -----> Destroying <routing-mode-terraform>...
+I, [2024-06-30T17:32:31.245991 #46141]  INFO -- Kitchen: -----> Testing <routing-mode-terraform>
+I, [2024-06-30T17:32:31.246069 #46141]  INFO -- Kitchen: -----> Creating <routing-mode-terraform>...
+I, [2024-06-30T17:32:31.753809 #46141]  INFO -- Kitchen: -----> Converging <routing-mode-terraform>...
+I, [2024-06-30T17:32:47.330096 #46141]  INFO -- Kitchen: -----> Setting up <routing-mode-terraform>...
+I, [2024-06-30T17:32:47.332623 #46141]  INFO -- Kitchen: -----> Verifying <routing-mode-terraform>...
+I, [2024-06-30T17:32:53.928298 #46141]  INFO -- Kitchen: -----> Destroying <routing-mode-terraform>...
+I, [2024-06-30T17:33:23.031732 #46141]  INFO -- Kitchen: -----> Test Kitchen is finished. (2m8.72s)

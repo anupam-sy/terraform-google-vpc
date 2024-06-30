@@ -13,6 +13,10 @@ env:
 jobs:
   test-tf-module:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      id-token: write
+      pull-requests: write
 
     steps:
       # Checkout the repository code
@@ -73,4 +77,4 @@ jobs:
 
       # Install the specified version of Terraform CLI
       - name: Run Kitchen-Terraform tests
-        run: bundle exec kitchen test
+        run: bundle exec kitchen test --destroy=always
