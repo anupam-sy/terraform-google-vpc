@@ -1,9 +1,17 @@
-name: Test Terraform Module
+name: Terraform Module CI
 
 on:
+  push:
+    branches:
+      - master
   pull_request:
     branches:
-      - main
+      - master
+    types:
+      - opened
+      - synchronize
+      - reopened
+  workflow_dispatch:
 
 env:
   TERRAFORM_VER: 1.3.6
@@ -11,7 +19,7 @@ env:
   CLOUDSDK_VER: 480.0.0
 
 jobs:
-  test-tf-module:
+  tf-module-release:
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -78,3 +86,11 @@ jobs:
       # Install the specified version of Terraform CLI
       - name: Run Kitchen-Terraform tests
         run: bundle exec kitchen test --destroy=always
+
+      - name: Release Please
+        id: release
+        if: github.ref == 'refs/heads/master' && github.event_name == 'push'
+        uses: googleapis/release-please-action@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          target-branch: ${{ github.ref_name }}
