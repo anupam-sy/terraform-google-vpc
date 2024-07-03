@@ -33,8 +33,9 @@ jobs:
         uses: trufflesecurity/trufflehog@main
         with:
           path: ./ # Code repository path
-          base: main # Start scanning from here (usually main branch).
-          head: HEAD # Scan commits until here (usually dev branch).
+          base: "" # Start scanning from here
+          head: ${{ github.ref_name }} # Scan commits until here
+          extra_args: --only-verified
 
       # Static code analysis using aqua security's tfsec
       - name: Run tfsec scan
