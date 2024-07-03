@@ -24,7 +24,7 @@ In order to deploy the VPC using this module, you must activate the Compute Engi
 ## Example Usage
 ```
 module "example-vpc" {
-  source = "./modules/terraform-gcp-vpc"
+  source = "anupam-sy/vpc/google"
 
   vpc_name                        = "<VPC NAME>"
   project_id                      = "<PROJECT ID>"
