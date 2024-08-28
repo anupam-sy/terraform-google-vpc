@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.0](https://github.com/anupam-sy/terraform-google-vpc/compare/v0.1.0...v0.2.0) (2024-08-28)
+
+
+### Features
+
+* commented unnecessary hooks ([#9](https://github.com/anupam-sy/terraform-google-vpc/issues/9)) ([f22a673](https://github.com/anupam-sy/terraform-google-vpc/commit/f22a673914c007cbbc7c089fec2dc4e87263da01))
+
 ## 0.1.0 (2024-07-03)
 
 
