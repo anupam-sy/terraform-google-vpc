@@ -34,7 +34,7 @@ jobs:
         with:
           path: ./ # Code repository path
           base: "" # Start scanning from here
-          head: ${GITHUB_HEAD_REF} # Scan commits until here
+          head: ${{ github.head_ref || github.ref_name }}  # Scan commits until here
           extra_args: --only-verified
 
       # Static code analysis using aqua security's tfsec
