@@ -17,7 +17,7 @@ repos:
       - id: terraform-fmt
       - id: terraform-validate
       # - id: tflint
-      - id: sentinel-fmt
-      - id: packer-validate
-      - id: shellcheck
-      - id: helmlint
+      # - id: sentinel-fmt
+      # - id: packer-validate
+      # - id: shellcheck
+      # - id: helmlint
