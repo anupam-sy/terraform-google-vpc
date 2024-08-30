@@ -84,7 +84,7 @@ jobs:
       - name: Run Kitchen-Terraform tests
         run: bundle exec kitchen test --destroy=always
 
-      # Release the new version of the module
+      # Release the new version of the module using release please
       - name: Release Please
         id: release
         if: github.ref == 'refs/heads/main' && github.event_name == 'push'
