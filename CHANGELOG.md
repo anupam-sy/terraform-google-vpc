@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.4.0](https://github.com/anupam-sy/terraform-google-vpc/compare/v0.3.0...v0.4.0) (2024-08-30)
+
+
+### Features
+
+* dummy commit ([#13](https://github.com/anupam-sy/terraform-google-vpc/issues/13)) ([df4a0fe](https://github.com/anupam-sy/terraform-google-vpc/commit/df4a0fe6868c42bdda5b95c456b076f86b8ddee6))
+
 ## [0.3.0](https://github.com/anupam-sy/terraform-google-vpc/compare/v0.2.0...v0.3.0) (2024-08-29)
 
 
